@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            List<Diék> list = new List<Diék>();
+
+
         }
     }
 }
