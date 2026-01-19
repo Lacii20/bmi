@@ -26,7 +26,7 @@ namespace bmi
 
         public override string ToString()
         {
-            return $"{Név} {Életkor}éves {Magasság}cm {Testsúly}kg"
+            return $"{Név} {Életkor}éves {Magasság}cm {Testsúly}kg";
         }
     }
 }
