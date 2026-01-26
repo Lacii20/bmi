@@ -46,7 +46,7 @@ namespace bmi
 
             }
             atlag /= list.Count;
-            Console.WriteLine($"5. a. feladat: átlagos testsúly")
+            Console.WriteLine($"5. a. feladat: átlagos testsúly" + $"{atlag:F1} kg");
             {
 
             }
