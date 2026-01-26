@@ -1,4 +1,6 @@
-﻿namespace bmi
+﻿using System.Threading.Channels;
+
+namespace bmi
 {
     internal class Program
     {
@@ -8,8 +10,8 @@
             var sorok = File.ReadAllLines("bmi.txt", System.Text.Encoding.Latin1).Skip(1);
             foreach (var sor in sorok)
             {
-                Console.WriteLine(sor);
-                string[] darabok =  sor.Split(";");
+                //Console.WriteLine(sor);
+                string[] darabok = sor.Split(";");
                 string nev = darabok[0];
                 int eletkor = Convert.ToInt32(darabok[1]);
                 int magassag = Convert.ToInt32(darabok[2]);
@@ -17,6 +19,24 @@
                 Diék d = new Diék(nev, eletkor, magassag, suly);
                 list.Add(d);
             }
+            foreach (var d in list)
+            {
+                Console.WriteLine(d);
+            }
+            Console.WriteLine("------------------");
+            Console.WriteLine($"3. a, feladat: A diákok száma: {list.Count}");
+
+            Diék legmagasabb = list[0];
+            foreach (var diék in list)
+            {
+                if (diék.Magasság > legmagasabb.Magasság)
+                {
+                    legmagasabb = diék;
+                }
+                Console.WriteLine($"3. b, feladat: A legmagasabb diák:"+$"{legmagasabb.Név}, Magasság: {legmagasabb.Magasság} cm ");
+            }
+
         }
+        
     }
 }
