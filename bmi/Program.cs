@@ -35,6 +35,21 @@ namespace bmi
                 }
                 Console.WriteLine($"3. b, feladat: A legmagasabb diák:"+$"{legmagasabb.Név}, Magasság: {legmagasabb.Magasság} cm ");
             }
+            foreach (var d in list)
+            {
+                Console.WriteLine(d.Név+"."+d.bmi() );
+            }
+            double atlag = 0;
+            foreach (var d in list)
+            {
+                atlag += d.Testsúly;
+
+            }
+            atlag /= list.Count;
+            Console.WriteLine($"5. a. feladat: átlagos testsúly")
+            {
+
+            }
 
         }
         
